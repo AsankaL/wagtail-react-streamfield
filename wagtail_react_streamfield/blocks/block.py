@@ -16,11 +16,9 @@ class NewBlock(Block):
     COLLAPSIBLE = 'COLLAPSIBLE'
 
     def get_layout(self):
-        
-        default = settings.WAGTAIL_REACT_STREAM_FIELD_DEFAULT_LAYOUT
-
-        if default and default in [self.SIMPLE, self.COLLAPSIBLE]:
-            return default
+        if hasattr(settings, 'WAGTAIL_REACT_STREAM_FIELD_DEFAULT_LAYOUT') and \
+                settings.WAGTAIL_REACT_STREAM_FIELD_DEFAULT_LAYOUT in [self.SIMPLE, self.COLLAPSIBLE]:
+            return settings.WAGTAIL_REACT_STREAM_FIELD_DEFAULT_LAYOUT
 
         return self.SIMPLE
 
