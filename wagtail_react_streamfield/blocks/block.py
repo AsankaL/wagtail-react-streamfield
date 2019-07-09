@@ -2,6 +2,7 @@ from uuid import uuid4
 
 from django.template.loader import render_to_string
 from django.utils.text import capfirst
+from django.conf import settings
 from wagtail.core.blocks import Block, StreamValue
 
 from wagtail_react_streamfield.exceptions import RemovedError
@@ -15,6 +16,12 @@ class NewBlock(Block):
     COLLAPSIBLE = 'COLLAPSIBLE'
 
     def get_layout(self):
+        
+        default = settings.WAGTAIL_REACT_STREAM_FIELD_DEFAULT_LAYOUT
+
+        if default and default in [self.SIMPLE, self.COLLAPSIBLE]:
+            return default
+
         return self.SIMPLE
 
     def prepare_value(self, value, errors=None):

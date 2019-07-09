@@ -206,26 +206,41 @@
 .icon-duplicate:before {
   content: '\E902'; }
 
-.c-sf-container .c-sf-button__icon .icon::before {
-  margin: unset; }
-
-.c-sf-container .field label {
-  float: unset;
-  width: unset;
-  max-width: unset;
-  padding: 0; }
-  .c-sf-container .field label::after {
-    content: ''; }
-
-.c-sf-container .field-content {
-  float: unset;
-  display: block;
-  width: unset; }
-  .c-sf-container .field-content textarea {
-    max-width: 100%; }
-
-.c-sf-container .help {
-  margin: 8px 0; }
+.c-sf-container {
+  padding: 17px 0 17px 20px;
+  position: relative; }
+  .c-sf-container .c-sf-add-button {
+    position: absolute !important;
+    width: 34px !important;
+    height: 34px !important;
+    left: -10px;
+    top: 0px; }
+  .c-sf-container .c-sf-container__block-container {
+    position: relative; }
+    .c-sf-container .c-sf-container__block-container .c-sf-add-button {
+      position: absolute !important;
+      width: 34px !important;
+      height: 34px !important;
+      bottom: -15px;
+      left: -30px !important;
+      top: auto !important; }
+  .c-sf-container .c-sf-button__icon .icon::before {
+    margin: unset; }
+  .c-sf-container .field label {
+    float: unset;
+    width: unset;
+    max-width: unset;
+    padding: 0; }
+    .c-sf-container .field label::after {
+      content: ''; }
+  .c-sf-container .field-content {
+    float: unset;
+    display: block;
+    width: unset; }
+    .c-sf-container .field-content textarea {
+      max-width: 100%; }
+  .c-sf-container .help {
+    margin: 8px 0; }
 
 .object.stream-field {
   background-color: #f6f6f6;

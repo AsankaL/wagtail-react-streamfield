@@ -11,6 +11,32 @@ $action-font-size: 18px;
 
 
 .c-sf-container {
+    // start #Custom
+    // Moves new block button to left side
+    padding: 17px 0 17px 20px;
+    position:relative;
+
+    .c-sf-add-button{
+        position: absolute !important;
+        width: 34px !important;
+        height: 34px !important;
+        left: -10px;
+        top:0px;
+        }
+
+    .c-sf-container__block-container{
+        position:relative;
+        .c-sf-add-button{
+            position: absolute !important;
+            width: 34px !important;
+            height: 34px !important;
+            bottom: -15px;
+            left: -30px !important;
+            top:auto !important;
+            }
+    }
+    // end #Custom
+
     // TODO: #CSSoverhaul the bse icon style here - the margin - should be reconsidered when
     // re-building the icon component as part of the CSS  These styles come from global
     // label styles in css/mixins/_general.scss -@jonnyscholes
