@@ -1,6 +1,55 @@
 What’s new in wagtail-react-streamfield?
 ========================================
 
+1.3.5
+-----
+
+Fixes validation errors in nested StructBlocks or ListBlocks
+
+1.3.4
+-----
+
+Fixes the broken JavaScript from TableBlock
+
+1.3.3
+-----
+
+Fixes a packaging issue due to a setuptools bug (it doesn’t clean its
+workspace before rebuilding, leading to extra unwanted files in the package)
+
+1.3.2
+-----
+
+Fixes an issue with collapsible ``FieldPanel``
+(nothing related to StreamFields) no longer working properly due to an
+overridden JavaScript file lagging behind the official version
+
+1.3.1
+-----
+
+Fixes another issue with radio buttons (the serialization was not right)
+
+1.3.0
+-----
+
+- Dropped Wagtail < 2.6 support
+- Removes layouts, only a single layout exists now, a mix of the best parts of
+  the former ``SIMPLE`` of ``COLLAPSIBLE``
+- Adds ``closed`` attribute in the ``Meta`` of blocks to set by block type
+  whether they should be closed on page editor load (defaults to ``False``)
+- Adds support for collapsible nested struct blocks
+- Speeds up server-side page editor load
+- Fixes two issues with radio buttons
+- Fixes an issue with missing IDs in StreamBlocks
+  (including the root StreamBlock)
+- Fixes callable default values
+- Fixes the dynamic title of the children of a ``ListBlock``
+- Fixes minor CSS details
+- Renamed ``Block.get_definition()`` to a ``Block.definition`` cached property
+  (overriding it with a simple ``@property`` works, but it will be faster
+  with ``@cached_property`` from ``django.utils.functional``)
+
+
 1.2.0
 -----
 
